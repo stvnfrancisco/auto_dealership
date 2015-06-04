@@ -40,6 +40,11 @@ get('/dealerships/:id/vehicles/new') do
     erb(:dealership_vehicles_form)
 end
 
+get('/vehicles') do
+  @vehicles = Vehicle.all()
+  erb(:vehicles)
+end
+
 post('/vehicles') do
   make = params.fetch('make')
   model = params.fetch('model')
