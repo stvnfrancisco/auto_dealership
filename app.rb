@@ -45,6 +45,10 @@ get('/vehicles') do
   erb(:vehicles)
 end
 
+get('/vehicle/new') do
+  erb(:vehicles_form)
+end
+
 post('/vehicles') do
   make = params.fetch('make')
   model = params.fetch('model')
