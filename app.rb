@@ -25,6 +25,13 @@ post('/dealerships') do
   erb(:success)
 end
 
+# get('/dealerships') do
+#   name = params.fetch('name')
+#   Dealership.new(name).delete()
+#   @dealerships = dealerships.all()
+#   erb(:dealerships)
+# end
+
 get('/vehicles/:id') do
   @vehicle = Vehicle.find(params.fetch("id"))
   erb(:vehicle)

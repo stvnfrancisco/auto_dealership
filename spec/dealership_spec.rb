@@ -36,6 +36,14 @@ describe(Dealership) do
     end
   end
 
+  describe('#delete') do
+    it("removes a dealership from the array of saved dealerships") do
+      test_dealership = Dealership.new("Rusty's Used Cars")
+      test_dealership.delete()
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
+
   describe(".all") do
     it("is empty at first") do
       expect(Dealership.all()).to(eq([]))

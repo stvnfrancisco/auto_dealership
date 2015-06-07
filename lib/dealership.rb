@@ -27,6 +27,10 @@ class Dealership
     @@dealerships.push(self)
   end
 
+  define_method(:delete) do
+    @@dealerships.delete(self)
+  end
+
   define_singleton_method(:clear) do
     @@dealerships = []
   end
